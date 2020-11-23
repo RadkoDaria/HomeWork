@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ClassLibraryHello\ClassLibraryHello.csproj" />
+    <ProjectReference Include="..\ClassLibraryHello\ClassLibraryHello.csproj" />
   </ItemGroup>
 
 </Project>
