@@ -20,11 +20,12 @@ namespace Hello__babe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Person p = new Person();
-            var txtName = p.name; 
-            txtName = textBox1.Text;
-            MessageBox.Show("Hello, " + txtName);
-          
+            GreetingBuilder builder = new GreetingBuilder();
+            var name = builder.Name;
+            name = textBox1.Text;
+            builder.GetGreeting(name);
+            var greeting = builder.GetGreeting(name);
+            MessageBox.Show(greeting, name);
         }
     }
 }
