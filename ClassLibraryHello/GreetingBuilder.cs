@@ -4,32 +4,15 @@ namespace ClassLibraryHello
 {
     public class GreetingBuilder
     {
-        private string name;
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-           set
-            {
-                name = value;
-            }
-        }
-        public GreetingBuilder(string name)
-        {
-            Name = name;
-        }
+        public string Name { get; set; }
         public GreetingBuilder()
         {
 
         }
-        public string GetGreeting(string name)
+        public string GetGreeting()
         {
             string hello = "Hello, ";
-            string greeting = String.Concat(DateTime.Now, hello, name);
+            string greeting = String.Concat(DateTime.Now, hello, Name);
             return greeting;
         }
     }

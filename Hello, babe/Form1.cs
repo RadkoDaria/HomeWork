@@ -21,11 +21,9 @@ namespace Hello__babe
         private void button1_Click(object sender, EventArgs e)
         {
             GreetingBuilder builder = new GreetingBuilder();
-            var name = builder.Name;
-            name = textBox1.Text;
-            builder.GetGreeting(name);
-            var greeting = builder.GetGreeting(name);
-            MessageBox.Show(greeting, name);
+            builder.Name = textBox1.Text;
+            var greeting = builder.GetGreeting();
+            MessageBox.Show(greeting);
         }
     }
 }

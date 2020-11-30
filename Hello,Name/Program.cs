@@ -7,13 +7,11 @@ namespace Hello_Name
     {
         static void Main(string[] args)
         {
-            GreetingBuilder builder = new GreetingBuilder();
-            var name = builder.Name;
-            Console.WriteLine("Enter your name");
-            name = Console.ReadLine();
-            builder.GetGreeting(name);
-            var greeting = builder.GetGreeting(name);
-            Console.WriteLine(greeting, name);
+            GreetingBuilder builder = new GreetingBuilder(); 
+            Console.WriteLine("Enter your name");  
+            builder.Name = Console.ReadLine();           
+            var greeting = builder.GetGreeting();
+            Console.WriteLine(greeting);
 
         }
     }
